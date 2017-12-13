@@ -1,3 +1,18 @@
 // Branding overrides
 //
 // Copy variables from `_branding.scss` to this file to override default values.
+$azul-verdoso: #0c383f;
+$gris: #6c6c6c;
+$rosita: #e76482;
+$morado: #473899;
+$azulito: #4c82cc;
+
+$primary: $azul-verdoso;
+$secondary: $morado;
+$tertiary: $azulito;
+
+/** ASSET URLS
+ * login-bg: image for login splash page 
+ */
+
+$login-bg: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Wikimedia_Hackathon_San_Francisco_107.jpg');

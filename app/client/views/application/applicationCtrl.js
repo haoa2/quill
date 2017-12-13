@@ -72,8 +72,8 @@ angular.module('reg')
           .updateProfile(Session.getUserId(), $scope.user.profile)
           .success(function(data){
             sweetAlert({
-              title: "Awesome!",
-              text: "Your application has been saved.",
+              title: "¡Increíble!",
+              text: "Tu registro ha sido guardado.",
               type: "success",
               confirmButtonColor: "#e76482"
             }, function(){
@@ -81,7 +81,7 @@ angular.module('reg')
             });
           })
           .error(function(res){
-            sweetAlert("Uh oh!", "Something went wrong.", "error");
+            sweetAlert("¡Oh oh!", "Algo salió mal :(.", "error");
           });
       }
 
@@ -115,7 +115,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please enter your name.'
+                  prompt: 'Porfavor introduce tu nombre completo.'
                 }
               ]
             },
@@ -124,7 +124,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please enter your school name.'
+                  prompt: 'Porfavor introduce el nombre de tu escuela.'
                 }
               ]
             },
@@ -133,7 +133,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please select your graduation year.'
+                  prompt: 'Porfavor selecciona tu año de graduación (o el más cercano).'
                 }
               ]
             },
@@ -142,7 +142,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please select a gender.'
+                  prompt: 'Porfavor selecciona una opción de género.'
                 }
               ]
             },
@@ -151,7 +151,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  prompt: 'Debes ser un adulto.'
                 }
               ]
             }

@@ -29,7 +29,7 @@ module.exports = function(router) {
       }
 
       return res.status(401).send({
-        message: 'Get outta here, punk!'
+        message: '¡Largo de aquí, novato!'
       });
 
     });

@@ -24,11 +24,11 @@ angular.module('reg')
       // All this just for dietary restriction checkboxes fml
 
       var dietaryRestrictions = {
-        'Vegetarian': false,
-        'Vegan': false,
+        'Vegetariano': false,
+        'Vegano': false,
         'Halal': false,
         'Kosher': false,
-        'Nut Allergy': false
+        'Alergia a Nueces': false
       };
 
       if (user.confirmation.dietaryRestrictions){
@@ -58,8 +58,8 @@ angular.module('reg')
           .updateConfirmation(user._id, confirmation)
           .success(function(data){
             sweetAlert({
-              title: "Woo!",
-              text: "You're confirmed!",
+              title: "¡Wuju!",
+              text: "¡Estás dentro!",
               type: "success",
               confirmButtonColor: "#e76482"
             }, function(){
@@ -67,7 +67,7 @@ angular.module('reg')
             });
           })
           .error(function(res){
-            sweetAlert("Uh oh!", "Something went wrong.", "error");
+            sweetAlert("¡Oh oh!", "Algo salió mal. :(", "error");
           });
       }
 
@@ -80,7 +80,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please give us a shirt size!'
+                  prompt: '¡Nos falta información de tu playera!'
                 }
               ]
             },

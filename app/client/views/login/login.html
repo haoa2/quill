@@ -4,7 +4,7 @@
       <div class="ui segment">
 
         <div class="logo">
-          <img src="assets/images/logo-color.svg">
+          <img src="assets/images/logo.svg">
         </div>
 
         <div class="ui divider"></div>
@@ -18,24 +18,24 @@
           <div class="ui login-password form">
             <form ng-submit="login()">
               <div class="field">
-                <label> Email</label>
+                <label> Correo Electrónico</label>
                 <input type="email"
                        id='email'
                        placeholder="foo@bar.edu"
                        ng-model="email">
               </div>
               <div class="field">
-                <label> Password</label>
+                <label> Contraseña</label>
                 <input type="password"
                        id='password'
-                       placeholder="Password (at least 6 characters)"
+                       placeholder="Contraseña (al menos 6 caracteres)"
                        ng-model="password" required>
               </div>
               <div class="field">
                 <button id="login-password"
                         type="submit"
                         class="fluid ui login button">
-                        Login
+                        Iniciar Sesión
                 </button>
               </div>
             </form>
@@ -48,7 +48,7 @@
                       type="submit"
                       class="fluid ui register button"
                       ng-click="register()">
-                      Register
+                      Registrarse
               </button>
             </div>
           </div>
@@ -58,7 +58,7 @@
           <div class="ui forgot-password form">
             <form ng-submit="sendResetEmail()">
               <div class="field">
-                <label> Email</label>
+                <label> Correo Electrónico</label>
                 <input type="email"
                        id='email'
                        placeholder="foo@bar.edu"
@@ -68,7 +68,7 @@
                 <button id="forgot-password"
                         type="submit"
                         class="fluid ui login button">
-                        Send Reset Email
+                        Enviar Email para restablecer Contraseña
                 </button>
               </div>
             </form>
@@ -79,13 +79,13 @@
 
         <div ng-show="loginState === 'login'" class="forgot">
           <a href="#" ng-click="setLoginState('forgot')">
-            Forgot Password?
+            ¿Olvidaste la contraseña?
           </a>
         </div>
 
         <div ng-show="loginState === 'forgot'" class="forgot">
           <a href="#" ng-click="setLoginState('login')">
-            {{regIsOpen ? 'Login or Register' : 'Login'}}
+            {{regIsOpen ? 'Iniciar Sesión o Registrar' : 'Iniciar Sesión'}}
           </a>
         </div>
 

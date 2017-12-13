@@ -26,7 +26,7 @@ function endsWith(s, test){
 function canRegister(email, password, callback){
 
   if (!password || password.length < 6){
-    return callback({ message: "Password must be 6 or more characters."}, false);
+    return callback({ message: "La contraseña debe tener 6 o más caracteres."}, false);
   }
 
   // Check if its within the registration window.
@@ -39,13 +39,13 @@ function canRegister(email, password, callback){
 
     if (now < times.timeOpen){
       return callback({
-        message: "Registration opens in " + moment(times.timeOpen).fromNow() + "!"
+        message: "¡El registro se abre en " + moment(times.timeOpen).fromNow() + "!"
       });
     }
 
     if (now > times.timeClose){
       return callback({
-        message: "Sorry, registration is closed."
+        message: "Lo sentimos, el registro terminó."
       });
     }
 
@@ -60,7 +60,7 @@ function canRegister(email, password, callback){
         }
       }
       return callback({
-        message: "Not a valid educational email."
+        message: "El correo no es válido."
       }, false);
     });
 
@@ -88,13 +88,13 @@ UserController.loginWithPassword = function(email, password, callback){
 
   if (!password || password.length === 0){
     return callback({
-      message: 'Please enter a password'
+      message: 'Porfavor introduce una contraseña'
     });
   }
 
   if (!validator.isEmail(email)){
     return callback({
-      message: 'Invalid email'
+      message: 'E-Mail inválido'
     });
   }
 
@@ -107,12 +107,12 @@ UserController.loginWithPassword = function(email, password, callback){
       }
       if (!user) {
         return callback({
-          message: "We couldn't find you!"
+          message: "¡No te pudimos encontrar!"
         });
       }
       if (!user.checkPassword(password)) {
         return callback({
-          message: "That's not the right password."
+          message: "Esa no es la contraseña correcta."
         });
       }
 
@@ -137,7 +137,7 @@ UserController.createUser = function(email, password, callback) {
 
   if (typeof email !== "string"){
     return callback({
-      message: "Email must be a string."
+      message: "El correo debe ser un string."
     });
   }
 
@@ -160,7 +160,7 @@ UserController.createUser = function(email, password, callback) {
 
         if (user) {
           return callback({
-            message: 'An account for this email already exists.'
+            message: 'Una cuenta con este email ya existe.'
           });
         } else {
 
@@ -297,13 +297,13 @@ UserController.updateProfileById = function (id, profile, callback){
 
       if (now < times.timeOpen){
         return callback({
-          message: "Registration opens in " + moment(times.timeOpen).fromNow() + "!"
+          message: "¡El registro se abre en " + moment(times.timeOpen).fromNow() + "!"
         });
       }
 
       if (now > times.timeClose){
         return callback({
-          message: "Sorry, registration is closed."
+          message: "Lo sentimos, el registro está cerrado."
         });
       }
     });
@@ -346,7 +346,7 @@ UserController.updateConfirmationById = function (id, confirmation, callback){
     // that's okay.
     if (Date.now() >= user.status.confirmBy && !user.status.confirmed){
       return callback({
-        message: "You've missed the confirmation deadline."
+        message: "La fecha máxima de confirmación ya pasó."
       });
     }
 
@@ -433,7 +433,7 @@ UserController.getTeammates = function(id, callback){
 
     if (!code){
       return callback({
-        message: "You're not on a team."
+        message: "No estás en un equipo."
       });
     }
 
@@ -456,13 +456,13 @@ UserController.createOrJoinTeam = function(id, code, callback){
 
   if (!code){
     return callback({
-      message: "Please enter a team name."
+      message: "Porfavor ingresa el nombre de un equipo."
     });
   }
 
   if (typeof code !== 'string') {
     return callback({
-      message: "Get outta here, punk!"
+      message: "Buen intento, novato."
     });
   }
 
@@ -474,7 +474,7 @@ UserController.createOrJoinTeam = function(id, code, callback){
     // Check to see if this team is joinable (< team max size)
     if (users.length >= maxTeamSize){
       return callback({
-        message: "Team is full."
+        message: "El equipo está lleno."
       });
     }
 
@@ -583,7 +583,7 @@ UserController.changePassword = function(id, oldPassword, newPassword, callback)
         callback);
       } else {
         return callback({
-          message: 'Incorrect password'
+          message: 'Contraseña Incorrecta'
         });
       }
     });
@@ -604,7 +604,7 @@ UserController.resetPassword = function(token, password, callback){
 
   if (password.length < 6){
     return callback({
-      message: 'Password must be 6 or more characters.'
+      message: 'La contraseña debe tener 6 o más caracteres.'
     });
   }
 
@@ -628,7 +628,7 @@ UserController.resetPassword = function(token, password, callback){
 
         Mailer.sendPasswordChangedEmail(user.email);
         return callback(null, {
-          message: 'Password successfully reset!'
+          message: '¡Contraseña correctamente restablecida!'
         });
       });
   });

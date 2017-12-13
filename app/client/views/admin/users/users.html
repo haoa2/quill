@@ -3,13 +3,13 @@
   <div class="ui stackable grid">
     <div class="three wide column">
       <div class="ui header">
-        Search
+        Buscar
       </div>
       <div class="ui form">
         <div class="field">
           <div class="ui icon fluid input">
             <input type="text"
-                   placeholder="Search..."
+                   placeholder="Buscar..."
                    ng-model="queryText"
                    ng-model-options="{debounce: 300}">
               <i class="search icon"></i>
@@ -46,14 +46,14 @@
 
           <div>
             <div class="ui header">
-              Status:
+              Estado:
               <div
                 class="ui label">
                 {{selectedUser.status.name.toUpperCase()}}
               </div>
             </div>
             <p>
-              <strong> Admitted by: </strong> {{selectedUser.status.admittedBy ? selectedUser.status.admittedBy : 'N/A'}}
+              <strong> Admitido Por: </strong> {{selectedUser.status.admittedBy ? selectedUser.status.admittedBy : 'N/A'}}
             </p>
           </div>
 
@@ -81,7 +81,7 @@
 
         <div class="actions">
           <div class="ui positive right labeled icon button">
-            Nothing
+            Correcto
             <i class="checkmark icon"></i>
           </div>
         </div>
@@ -91,10 +91,10 @@
         class="ui celled selectable compact users table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>E-mail address</th>
-            <th>School</th>
-            <th>Grad</th>
+            <th>Nombre</th>
+            <th>Correo Electrónico</th>
+            <th>Escuela</th>
+            <th>Año de Graduación</th>
             <th>V/S/A/C</th>
             <th>Host</th>
             <th>$</th>

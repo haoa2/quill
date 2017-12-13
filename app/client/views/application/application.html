@@ -1,6 +1,6 @@
 <div id="application" class="page">
   <div class="divided title">
-    Application
+    Aplicación
   </div>
 
   <div class="ui stackable page grid">
@@ -8,7 +8,7 @@
       <div class="ui form"
             ng-class="{'loading': loading}">
 
-        <div class="divided title">Basic Information</div>
+        <div class="divided title">Información Básica</div>
 
         <fieldset ng-disabled="regIsClosed">
 
@@ -21,14 +21,14 @@
         </div>
 
         <div class="field">
-          <label> Full Name </label>
+          <label> Nombre Completo </label>
           <input type="text"
                  name="name"
                  ng-model="user.profile.name">
         </div>
 
         <div class="field" ng-show="autoFilledSchool">
-          <label> School </label>
+          <label> Escuela </label>
           <input class="ui input"
                  disabled="disabled"
                  ng-show="autoFilledSchool"
@@ -36,51 +36,58 @@
         </div>
 
         <div class="field" ng-show="!autoFilledSchool">
-          <label> School </label>
+          <label> Escuela </label>
           <div id="school" class="ui search">
             <div class="ui input">
-              <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">                
+              <input class="prompt" type="text" placeholder="Escuela" name="school" ng-model="user.profile.school">                
             </div>
             <div class="results"></div>
           </div>
         </div>
 
         <div class="field">
-          <label>Graduation Year</label>
+          <label>Año de Graduación</label>
           <select
             name="year"
             ng-model="user.profile.graduationYear">
-            <option value="">Graduation Year</option>
+            <option value="">Año de Graduación</option>
+            <option value="2019">2013</option>
+            <option value="2019">2014</option>
+            <option value="2019">2015</option>
             <option value="2016">2016</option>
             <option value="2017">2017</option>
             <option value="2018">2018</option>
             <option value="2019">2019</option>
+            <option value="2019">2020</option>
+            <option value="2019">2021</option>
+            <option value="2019">2022</option>
+            <option value="2019">2023</option>
           </select>
         </div>
 
         <div class="field">
-          <label>Gender</label>
+          <label>Género</label>
           <select
             name="gender"
             ng-model="user.profile.gender">
-            <option value="">Gender</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
-            <option value="O">Other</option>
-            <option value="N">I prefer not to answer.</option>
+            <option value="">Género</option>
+            <option value="M">Hombre</option>
+            <option value="F">Mujer</option>
+            <option value="O">Otro</option>
+            <option value="N">Prefiero no responder.</option>
           </select>
         </div>
 
         <div class="field">
-          <label>I would describe myself as a...</label>
+          <label>Me describiría a mi mismo como...</label>
           <input type="text"
-                 placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
+                 placeholder="Diseñador, Data Scientist, Mago de iOS, Hacker Extraordinario, Hechicero del Concreto..."
                  ng-model="user.profile.description">
         </div>
 
         <div class="field">
           <label>
-              What would you like to learn or get out of HackMIT? (optional)
+              ¿Qué es lo que más te gustaría aprender o llevarte a casa del Hackatón Ciudad 4.0? (opcional)
           </label>
           <textarea ng-model="user.profile.essay">
           </textarea>
@@ -89,17 +96,18 @@
         <div class="field"
              ng-hide="isMitStudent">
           <p>
-            Because of limitations imposed by MIT, we are not legally allowed to host
-            non-MIT minors (those under 18) for HackMIT 2015. Checking the box below affirms that you are or will be 18 years or older by September 19th, 2015.
+            Debido a las limitaciones impuestas por el Congreso Nacional de Ingeniería civil, no nos
+            es permitido aceptar menores de edad (menores de 18 años) para el Hackatón Ciudad 4.0
+            Al confirmar la casilla debajo afirmas que tienes o tendrás 18 años o más al momento del evento.
           </p>
           <p>
             <strong>
-            We will be checking ID. If you are a non-MIT minor, you will be turned away at the door.
+            Revisaremos credencial de elector. Si eres un menor de edad, se te negará el acceso en la entrada.
             </strong>
           </p>
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
-            <label for="adult">I am 18 or older.</label>
+            <label for="adult">Tengo 18 años o más.</label>
           </div>
         </div>
 
@@ -109,7 +117,7 @@
           <button type="submit"
                   class="fluid ui purple button"
                   ng-click="submitForm()">
-            Submit
+            Registrar
           </button>
         </div>
 

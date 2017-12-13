@@ -14,7 +14,7 @@ angular.module('reg')
         var confirm = $scope.confirm;
 
         if (password !== confirm){
-          $scope.error = "Passwords don't match!";
+          $scope.error = "¡Las contraseñas no coinciden!";
           $scope.confirm = "";
           return;
         }
@@ -24,8 +24,8 @@ angular.module('reg')
           $scope.password,
           function(message){
             sweetAlert({
-              title: "Neato!",
-              text: "Your password has been changed!",
+              title: "¡Wuju!",
+              text: "¡Tu contraseña ha sido actualizada!",
               type: "success",
               confirmButtonColor: "#e76482"
             }, function(){

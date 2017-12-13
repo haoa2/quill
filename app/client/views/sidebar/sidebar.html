@@ -2,13 +2,13 @@
      ng-class="{open: showSidebar}">
   <div ui-sref="app.dashboard"
        class="logo item">
-    <img src="assets/images/logo.svg">
+    <img src="assets/images/logo.png">
   </div>
 
   <div ui-sref-active="active"
        ui-sref="app.dashboard"
        class="item">
-    Dashboard
+    Inicio
   </div>
 
   <div ng-show="currentUser.verified">
@@ -18,7 +18,7 @@
       ui-sref="app.application"
       ng-show="!currentUser.status.declined"
       class="item">
-      Application
+      Aplicación
     </div>
 
     <div
@@ -26,7 +26,7 @@
       ui-sref="app.confirmation"
       ng-show="!pastConfirmation && currentUser.status.admitted && !currentUser.status.declined"
       class="item">
-      Confirmation
+      Confirmación
     </div>
 
     <div
@@ -34,7 +34,7 @@
       ui-sref="app.team"
       ng-show="!currentUser.status.declined"
       class="item">
-      Team
+      Equipo
     </div>
 
     <div
@@ -49,7 +49,7 @@
 
   <div class="item"
        ng-click="logout()">
-    Logout
+    Cerrar Sesión
   </div>
 
   <div class="note">
@@ -60,7 +60,7 @@
 
 <div class="tab"
   ng-click="toggleSidebar()">
-  <img ng-show="!showSidebar" src="assets/images/logo.svg" />
+  <img ng-show="!showSidebar" src="assets/images/logo-flechas.png" />
   <span class="close" ng-show="showSidebar">&#x2715</span>
 </div>
 

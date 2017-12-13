@@ -1,13 +1,13 @@
 <div id="dashboard" class="page">
   <div class="divided title">
-    Dashboard
+    Inicio
   </div>
 
   <div class="ui stackable centered page grid">
     <div class="column">
       <div class="ui status segment">
         <div class="small title">
-          Your status:
+          Tu estado:
         </div>
         <br>
 
@@ -21,14 +21,14 @@
         <div
           class="declined state"
           ng-if="dashState('admittedAndCannotConfirm')">
-          Expired Admission
+          Admisión Expirada
         </div>
 
 
         <div
           ng-if="showWaitlist"
           class="waitlist state">
-          On waitlist
+          En lista de espera
         </div>
 
         <div class="ui divider"></div>
@@ -36,7 +36,7 @@
         <div ng-if="user.profile.name.length > 0">
           <p>
             <strong>
-              Welcome back, {{user.profile.name}}!
+              ¡Bienvenido de nuevo {{user.profile.name}}!
             </strong>
           </p>
           <p>
@@ -48,14 +48,14 @@
           class="description">
           <p>
             <strong>
-            Your email address ({{user.email}}) is not yet verified.
+            Tu correo electrónico ({{user.email}}) no ha sido verificado.
             </strong>
           </p>
           <p>
             {{ DASHBOARD.UNVERIFIED }}
           </p>
           <div class="ui purple button" ng-click="resendEmail()">
-            Resend verification email
+            Reenviar correo de verificación de email.
           </div>
         </div>
 
@@ -63,7 +63,7 @@
           ng-class="settings.timeClose"
           ng-if="!dashState('admittedAndCanConfirm') || !dashState('admittedAndCannotConfirm') || !dashState('confirmed') || !dashState('declined')">
           <strong>
-            Registration Deadline:
+            Fecha límite de Registro:
           </strong>
           {{ timeClose }}
         </div>
@@ -72,7 +72,7 @@
           ng-class="settings.timeConfirm"
           ng-if="dashState('admittedAndCanConfirm') || dashState('admittedAndCannotConfirm') || dashState('confirmed') || dashState('declined')">
           <strong>
-            Confirmation Deadline:
+            Fecha límite de Confirmación:
           </strong>
           {{ timeConfirm }}
         </div>
@@ -91,7 +91,7 @@
 
           <div class="ui purple button"
                ui-sref="app.application">
-            Complete your application
+            Completa tu aplicación
           </div>
 
         </div>
@@ -109,21 +109,21 @@
           </p>
           <div class="ui purple button"
                ui-sref="app.application">
-            Edit your application
+            Edita tu aplicación
           </div>
 
           <div
             class="ui pink button"
             ng-show="!user.teamCode"
             ui-sref="app.team">
-            Create or join a team
+            Crear o unirse a un equipo
           </div>
 
           <div
             class="ui pink button"
             ng-show="user.teamCode"
             ui-sref="app.team">
-            View your Team
+            Ver tu equipo
           </div>
 
         </div>
@@ -151,14 +151,14 @@
 
           <div class="ui purple button"
                ui-sref="app.application">
-            View your application
+            Ver tu aplicación
           </div>
 
           <div
             class="ui pink button"
             ng-show="user.teamCode"
             ui-sref="app.team">
-            View your Team
+            Ver tu equipo
           </div>
         </div>
 
@@ -185,12 +185,12 @@
 
           <div class="ui purple button"
                ui-sref="app.confirmation">
-            Confirm your spot
+            Confirma tu lugar
           </div>
 
           <div class="ui red button"
                ng-click="declineAdmission()">
-            Sorry, I can't make it
+            Lo siento, no podré asistir
           </div>
 
         </div>
@@ -230,12 +230,12 @@
 
           <div class="ui purple button"
                ui-sref="app.confirmation">
-            {{pastConfirmation ? 'View' : 'Edit'}} your confirmation information
+            {{pastConfirmation ? 'Ver' : 'Editar'}} tu información de confirmación
           </div>
 
           <div class="ui red button"
                ng-click="declineAdmission()">
-            Sorry, I can't make it
+            Lo siento, no podré asistir
           </div>
 
         </div>

@@ -76,9 +76,9 @@ angular.module('reg')
         url: "/confirmation",
         templateUrl: "views/confirmation/confirmation.html",
         controller: 'ConfirmationCtrl',
-        data: {
-          requireCompletedProfile: true
-        },
+        // data: {
+        //   requireCompletedProfile: true
+        // },
         resolve: {
           currentUser: function(UserService){
             return UserService.getCurrentUser();

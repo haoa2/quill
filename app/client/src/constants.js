@@ -1,21 +1,21 @@
 angular.module('reg')
     .constant('EVENT_INFO', {
-        NAME: 'HackMIT 2015',
+        NAME: 'Hackatón Ciudad 4.0',
     })
     .constant('DASHBOARD', {
-        UNVERIFIED: 'You should have received an email asking you verify your email. Click the link in the email and you can start your application!',
-        INCOMPLETE_TITLE: 'You still need to complete your application!',
-        INCOMPLETE: 'If you do not complete your application before the [APP_DEADLINE], you will not be considered for the admissions lottery!',
-        SUBMITTED_TITLE: 'Your application has been submitted!',
-        SUBMITTED: 'Feel free to edit it at any time. However, once registration is closed, you will not be able to edit it any further.\nAdmissions will be determined by a random lottery. Please make sure your information is accurate before registration is closed!',
-        CLOSED_AND_INCOMPLETE_TITLE: 'Unfortunately, registration has closed, and the lottery process has begun.',
-        CLOSED_AND_INCOMPLETE: 'Because you have not completed your profile in time, you will not be eligible for the lottery process.',
-        ADMITTED_AND_CAN_CONFIRM_TITLE: 'You must confirm by [CONFIRM_DEADLINE].',
-        ADMITTED_AND_CANNOT_CONFIRM_TITLE: 'Your confirmation deadline of [CONFIRM_DEADLINE] has passed.',
-        ADMITTED_AND_CANNOT_CONFIRM: 'Although you were accepted, you did not complete your confirmation in time.\nUnfortunately, this means that you will not be able to attend the event, as we must begin to accept other applicants on the waitlist.\nWe hope to see you again next year!',
-        CONFIRMED_NOT_PAST_TITLE: 'You can edit your confirmation information until [CONFIRM_DEADLINE]',
-        DECLINED: 'We\'re sorry to hear that you won\'t be able to make it to HackMIT 2015! :(\nMaybe next year! We hope you see you again soon.',
+        UNVERIFIED: 'Debiste haber recibido un correo electrónico pidiendo que verifiques tu correo electrónico. ¡Haz click en el link dentro del correo electrónico para que puedas continuar con tu aplicación!',
+        INCOMPLETE_TITLE: '¡Necesitas completar tu registro!',
+        INCOMPLETE: 'Si no completas tu registro antes del [APP_DEADLINE], no serás considerado para el evento.',
+        SUBMITTED_TITLE: '¡Tu registro se ha subido satisfactoriamente!',
+        SUBMITTED: 'Siéntete libre de editar tu registro en cualquier momento. Una vez cerrado el registro no podrás hacer ningún cambio a esta información.\nLas admisiones se darán en el orden de registro. ¡Asegúrate que tu información sea correcta antes de que se cierre el registro!',
+        CLOSED_AND_INCOMPLETE_TITLE: 'Desafortunadamente, el registro ha terminado y han comenzado a repartirse las admisiones.',
+        CLOSED_AND_INCOMPLETE: 'Debido a que no completaste tu perfil a tiempo, no serás elegible para una admisión al evento.',
+        ADMITTED_AND_CAN_CONFIRM_TITLE: 'Debes confirmar tu asistencia antes del [CONFIRM_DEADLINE].',
+        ADMITTED_AND_CANNOT_CONFIRM_TITLE: 'La fecha de confirmación [CONFIRM_DEADLINE] ya pasó.',
+        ADMITTED_AND_CANNOT_CONFIRM: 'Aunque fuiste aceptado/aceptada, no completaste tu registro a tiempo.\nLamentablemente esto significa que no te será posible acceder al evento, esto debido a que hemos comenzado a asignar lugares a las personas en lista de espera.\n¡Esperamos verte el próximo año!',
+        CONFIRMED_NOT_PAST_TITLE: 'Puedes editar tu información de confirmación hasta [CONFIRM_DEADLINE]',
+        DECLINED: '¡Lamentamos que no puedas asistir al Hackatón Ciudad 4.0! :(\nNos vemos el próximo año.',
     })
     .constant('TEAM',{
-        NO_TEAM_REG_CLOSED: 'Unfortunately, it\'s too late to enter the lottery with a team.\nHowever, you can still form teams on your own before or during the event!',
+        NO_TEAM_REG_CLOSED: 'El tiempo para asignación de equipos ha pasado.\nSin embargo aún puedes formar equipos o integrarte a otros durante el evento.',
     });

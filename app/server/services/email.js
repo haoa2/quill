@@ -88,7 +88,7 @@ controller.sendVerificationEmail = function(email, token, callback) {
 
   var options = {
     to: email,
-    subject: "["+HACKATHON_NAME+"] - Verify your email"
+    subject: "["+HACKATHON_NAME+"] - Verifica tu E-Mail"
   };
 
   var locals = {
@@ -125,16 +125,16 @@ controller.sendPasswordResetEmail = function(email, token, callback) {
 
   var options = {
     to: email,
-    subject: "["+HACKATHON_NAME+"] - Password reset requested!"
+    subject: "["+HACKATHON_NAME+"] - ¡Se ha solicitado un cambio de contraseña!"
   };
 
   var locals = {
-    title: 'Password Reset Request',
+    title: 'Cambio de Contraseña',
     subtitle: '',
-    description: 'Somebody (hopefully you!) has requested that your password be reset. If ' +
-      'this was not you, feel free to disregard this email. This link will expire in one hour.',
+    description: 'Alguien (esperamos que seas tú) ha solicitado un cambio de contraseña. Si ' +
+      'no fuiste tu, no hagas caso a este email. Este link expirará en una hora.',
     actionUrl: ROOT_URL + '/reset/' + token,
-    actionName: "Reset Password"
+    actionName: "Restablecer Contraseña"
   };
 
   /**
@@ -166,12 +166,12 @@ controller.sendPasswordChangedEmail = function(email, callback){
 
   var options = {
     to: email,
-    subject: "["+HACKATHON_NAME+"] - Your password has been changed!"
+    subject: "["+HACKATHON_NAME+"] - ¡Tu contraseña ha sido actualizada!"
   };
 
   var locals = {
-    title: 'Password Updated',
-    body: 'Somebody (hopefully you!) has successfully changed your password.',
+    title: 'Contraseña actualizada',
+    body: 'Alguien (esperamos que tú) ha actualizado satisfactoriamente tu contraseña.',
   };
 
   /**

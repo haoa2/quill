@@ -66,12 +66,12 @@ angular.module('reg')
 
         if (!user.status.checkedIn){
           swal({
-            title: "Whoa, wait a minute!",
-            text: "You are about to check in " + user.profile.name + "!",
+            title: "¡Whoa, espera un segundo!",
+            text: "¡Estás a punto de registrar la llegada de " + user.profile.name + "!",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, check them in.",
+            confirmButtonText: "Si, registra su llegada.",
             closeOnConfirm: false
             },
             function(){
@@ -79,7 +79,7 @@ angular.module('reg')
                 .checkIn(user._id)
                 .success(function(user){
                   $scope.users[index] = user;
-                  swal("Accepted", user.profile.name + ' has been checked in.', "success");
+                  swal("Aceptado", user.profile.name + ' ha registrado su llegada.', "success");
                 });
             }
           );
@@ -88,7 +88,7 @@ angular.module('reg')
             .checkOut(user._id)
             .success(function(user){
               $scope.users[index] = user;
-              swal("Accepted", user.profile.name + ' has been checked out.', "success");
+              swal("Aceptado", user.profile.name + ' ha registrado su salida.', "success");
             });
         }
       };
@@ -97,23 +97,23 @@ angular.module('reg')
         $event.stopPropagation();
 
         swal({
-          title: "Whoa, wait a minute!",
-          text: "You are about to accept " + user.profile.name + "!",
+          title: "¡Whoa, espera un segundo!",
+          text: "¡Estás a punto de aceptar a " + user.profile.name + "!",
           type: "warning",
           showCancelButton: true,
           confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Yes, accept them.",
+          confirmButtonText: "Sí, acéptalo.",
           closeOnConfirm: false
           }, function(){
 
             swal({
-              title: "Are you sure?",
-              text: "Your account will be logged as having accepted this user. " +
-                "Remember, this power is a privilege.",
+              title: "¿Estás seguro?",
+              text: "Se registrará con tu cuenta que aceptaste a este usuario. " +
+                "Recuerda, este poder es un privilegio.",
               type: "warning",
               showCancelButton: true,
               confirmButtonColor: "#DD6B55",
-              confirmButtonText: "Yes, accept this user.",
+              confirmButtonText: "Si, aceptar a este usuario.",
               closeOnConfirm: false
               }, function(){
 
@@ -121,7 +121,7 @@ angular.module('reg')
                   .admitUser(user._id)
                   .success(function(user){
                     $scope.users[index] = user;
-                    swal("Accepted", user.profile.name + ' has been admitted.', "success");
+                    swal("Aceptado", user.profile.name + ' ha sido admitido.', "success");
                   });
 
               });
@@ -158,106 +158,106 @@ angular.module('reg')
       function generateSections(user){
         return [
           {
-            name: 'Basic Info',
+            name: 'Información Básica',
             fields: [
               {
-                name: 'Created On',
+                name: 'Creado',
                 value: formatTime(user.timestamp)
               },{
-                name: 'Last Updated',
+                name: 'Última Actualización',
                 value: formatTime(user.lastUpdated)
               },{
-                name: 'Confirm By',
+                name: 'Confirmar Antes De',
                 value: formatTime(user.status.confirmBy) || 'N/A'
               },{
-                name: 'Checked In',
+                name: 'Check In',
                 value: formatTime(user.status.checkInTime) || 'N/A'
               },{
-                name: 'Email',
+                name: 'Correo Electrónico',
                 value: user.email
               },{
-                name: 'Team',
+                name: 'Equipo',
                 value: user.teamCode || 'None'
               }
             ]
           },{
-            name: 'Profile',
+            name: 'Perfil',
             fields: [
               {
-                name: 'Name',
+                name: 'Nombre',
                 value: user.profile.name
               },{
-                name: 'Gender',
+                name: 'Género',
                 value: user.profile.gender
               },{
-                name: 'School',
+                name: 'Escuela',
                 value: user.profile.school
               },{
-                name: 'Graduation Year',
+                name: 'Año de Graduación',
                 value: user.profile.graduationYear
               },{
-                name: 'Description',
+                name: 'Descripción',
                 value: user.profile.description
               },{
-                name: 'Essay',
+                name: 'Currículum',
                 value: user.profile.essay
               }
             ]
           },{
-            name: 'Confirmation',
+            name: 'Confirmación',
             fields: [
               {
-                name: 'Phone Number',
+                name: 'Número de Teléfono',
                 value: user.confirmation.phoneNumber
               },{
-                name: 'Dietary Restrictions',
+                name: 'Restricciones de Dieta',
                 value: user.confirmation.dietaryRestrictions.join(', ')
               },{
-                name: 'Shirt Size',
+                name: 'Tamaño de Playera',
                 value: user.confirmation.shirtSize
               },{
-                name: 'Major',
+                name: 'Carrera',
                 value: user.confirmation.major
               },{
                 name: 'Github',
                 value: user.confirmation.github
               },{
-                name: 'Website',
+                name: 'Página Web',
                 value: user.confirmation.website
               },{
-                name: 'Needs Hardware',
+                name: 'Usará Hardware',
                 value: user.confirmation.wantsHardware,
                 type: 'boolean'
               },{
-                name: 'Hardware Requested',
+                name: 'Tipo de Hardware',
                 value: user.confirmation.hardware
               }
             ]
           },{
-            name: 'Hosting',
+            name: 'Estancia',
             fields: [
               {
-                name: 'Needs Hosting Friday',
+                name: 'Se quedará el Viernes',
                 value: user.confirmation.hostNeededFri,
                 type: 'boolean'
               },{
-                name: 'Needs Hosting Saturday',
+                name: 'Se quedará el Sábado',
                 value: user.confirmation.hostNeededSat,
                 type: 'boolean'
               },{
-                name: 'Gender Neutral',
+                name: 'Neutral de Género',
                 value: user.confirmation.genderNeutral,
                 type: 'boolean'
               },{
-                name: 'Cat Friendly',
+                name: 'Amigable con Gatos',
                 value: user.confirmation.catFriendly,
                 type: 'boolean'
               },{
-                name: 'Smoking Friendly',
+                name: 'Amigable con Fumadores',
                 value: user.confirmation.smokingFriendly,
                 type: 'boolean'
               },{
-                name: 'Hosting Notes',
+                name: 'Notas de Estancia',
                 value: user.confirmation.hostNotes
               }
             ]

@@ -30,9 +30,9 @@ angular.module('reg')
           .success(function (data) {
             $scope.settings.allowMinors = data.allowMinors;
             const successText = $scope.settings.allowMinors ?
-              "Minors are now allowed to register." :
-              "Minors are no longer allowed to register."
-            swal("Looks good!", successText, "success");
+              "Los menores están permitidos para registrarse." :
+              "Los menores no están permitidos para registrarse."
+            swal("¡Muy bien!", successText, "success");
           });
       };
 
@@ -48,7 +48,7 @@ angular.module('reg')
         SettingsService
           .updateWhitelistedEmails($scope.whitelist.replace(/ /g, '').split(','))
           .success(function(settings){
-            swal('Whitelist updated.');
+            swal('La lista de correos permitidos ha sido actualizada.');
             $scope.whitelist = settings.whitelistedEmails.join(", ");
           });
       };
@@ -57,7 +57,7 @@ angular.module('reg')
 
       $scope.formatDate = function(date){
         if (!date){
-          return "Invalid Date";
+          return "Fecha Inválida";
         }
 
         // Hack for timezone
@@ -93,7 +93,7 @@ angular.module('reg')
           .updateRegistrationTimes(open, close)
           .success(function(settings){
             updateSettings(settings);
-            swal("Looks good!", "Registration Times Updated", "success");
+            swal("¡Muy bien!", "Los tiempos de registro se han actualizado", "success");
           });
       };
 
@@ -106,7 +106,7 @@ angular.module('reg')
           .updateConfirmationTime(confirmBy)
           .success(function(settings){
             updateSettings(settings);
-            swal("Sounds good!", "Confirmation Date Updated", "success");
+            swal("¡Me gusta!", "Fecha de confirmación actualizada", "success");
           });
       };
 
@@ -123,7 +123,7 @@ angular.module('reg')
         SettingsService
           .updateWaitlistText(text)
           .success(function(data){
-            swal("Looks good!", "Waitlist Text Updated", "success");
+            swal("¡Eso!", "Texto para lista de espera actualizado", "success");
             updateSettings(data);
           });
       };
@@ -133,7 +133,7 @@ angular.module('reg')
         SettingsService
           .updateAcceptanceText(text)
           .success(function(data){
-            swal("Looks good!", "Acceptance Text Updated", "success");
+            swal("¡Eso es todo!", "Texto de aceptación actualizado", "success");
             updateSettings(data);
           });
       };
@@ -143,7 +143,7 @@ angular.module('reg')
         SettingsService
           .updateConfirmationText(text)
           .success(function(data){
-            swal("Looks good!", "Confirmation Text Updated", "success");
+            swal("¡Qué bien!", "Texto de confirmación actualizado", "success");
             updateSettings(data);
           });
       };

@@ -35,7 +35,11 @@
 
     &.logo {
       opacity: 1;
-      padding: 48px;
+      //padding: 48px;
+      img {
+        //background-color: #0c383f;
+        width: 100%;
+      }
     }
 
   }
@@ -73,6 +77,10 @@
     .close {
       color: white;
       font-size: 2em;
+    }
+
+    img {
+      width: 100%;
     }
   }
 

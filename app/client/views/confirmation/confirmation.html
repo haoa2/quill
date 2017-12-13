@@ -1,6 +1,6 @@
 <div class="page">
   <div class="divided title">
-    Confirmation
+    Confirmación
   </div>
 
   <div class="ui stackable page grid">
@@ -8,14 +8,14 @@
 
       <div class="ui form">
 
-        <div class="divided title">Basic Details</div>
+        <div class="divided title">Detalles Básicos</div>
 
         <fieldset ng-disabled="pastConfirmation">
 
           <div class="field">
-            <label> What's your phone number? (required) </label>
+            <label> ¿Cuál es tu teléfono celular? (requerido) </label>
             <p>
-              We need this in case we need to get ahold of you!
+              ¡Necesitamos esta información en caso de que tengamos que contactarte!
             </p>
             <input type="tel"
                    name="phone"
@@ -25,13 +25,13 @@
           </div>
 
           <div class="field">
-            <label> Dietary Restrictions </label>
+            <label> Restricciones de Dieta </label>
 
             <p>
-              If your restriction is not included here, please let us know in the additional notes at the bottom.
+              Si tu restricción no aparece aquí, dejanos detalles en las notas al final.
             </p>
             <p>
-              We'll make sure you get fed :)
+              Nos aseguraremos de que tengas comida :)
             </p>
 
           </div>
@@ -49,15 +49,15 @@
           </div>
 
           <div class="field">
-            <label> Shirt Size (required) </label>
+            <label> Tamaño de Playera (requerido) </label>
             <p>
-              Let's get you some swag!
+              ¡Hora de los regalos!
             </p>
             <select
               name="shirt"
               ng-model="user.confirmation.shirtSize"
               required>
-              <option value="">Shirt Size</option>
+              <option value="">Tamaño de Playera</option>
               <option value="XS">Unisex X-Small</option>
               <option value="S">Unisex Small</option>
               <option value="M">Unisex Medium</option>
@@ -75,11 +75,11 @@
 
           <div class="field">
             <label>
-              Will you be needing hardware?
+              ¿Usarás hardware durante el hackatón?
             </label>
             <div class="ui checkbox">
               <input type="checkbox" ng-model="user.confirmation.wantsHardware">
-              <label> Yes, I would like to use hardware in my hack. </label>
+              <label> Si, trabajaré con hardware durante el evento. </label>
             </div>
           </div>
 
@@ -87,10 +87,11 @@
             class="field"
             ng-show="user.confirmation.wantsHardware">
             <label>
-              What kind of hardware would be useful for you?
+              ¿Qué tipo de hardware planeas usar?
             </label>
             <p>
-              We will have a hardware checkout, and we'll try our best to provide things that would be useful to you - however, we can't guarantee everything. We will publish a list of available hardware closer to the day of the event.
+              Queremos saber qué tipo de equipos habrá durante el evento con el fin de poder mantener la seguridad e integridad
+              del evento
             </p>
             <input type="text" ng-model="user.confirmation.hardware">
           </div>
@@ -99,13 +100,13 @@
           <br>
           <br>
 
-          <div class="divided title"> Skills & Accomplishments </div>
+          <div class="divided title"> Logros y Habilidades </div>
 
           <div class="field">
-            <label> What are you studying? </label>
+            <label> ¿Qué estás estudiando? </label>
             <input type="text"
                    name="study"
-                   placeholder="Computer Science, Product Design, Basket Weaving, etc."
+                   placeholder="Ing. Civil, Ing. Sistemas Computacionales, Diseño Industrial, Repujado, etc."
                    ng-model="user.confirmation.major">
           </div>
 
@@ -126,25 +127,25 @@
           </div>
 
           <div class="field">
-            <label> Skill Sheet (required) </label>
+            <label> Datos de Habilidades (requerido) </label>
             <p>
-              Upload a document outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
+              Sube un documento con información acerca de tus habilidades (ej. Currículum Vitae). ¡En PDF de preferencia!
             </p>
             <a
               target="_blank"
               href="https://go.hackmit.org/skill-sheets"
               class="ui pink button">
-              Upload
+              Subir
             </a>
           </div>
 
           <br>
           <br>
 
-          <div class="divided title">Hosting Details</div>
+          <div class="divided title">Detalles de Sueño</div>
 
           <p>
-            Would you like us to find you a host? We can match you with someone so you can catch some zzz's the night before and/or the night of the event!
+            Proporciónanos detalles para organizar las áreas de descanso de mejor manera.
           </p>
 
           <div class="field">
@@ -152,7 +153,7 @@
               <input type="checkbox" ng-model="user.confirmation.hostNeededFri">
               <label>
                 <strong>
-                  I would like a host for Friday, Sept. 18th.
+                  Planeo dormir la primer noche del evento en la sede.
                 </strong>
               </label>
             </div>
@@ -163,7 +164,7 @@
               <input type="checkbox" ng-model="user.confirmation.hostNeededSat">
               <label>
                 <strong>
-                I would like a host for Saturday, Sept. 19th.
+                  Planeo dormir la segunda noche del evento en la sede.
                 </strong>
               </label>
             </div>
@@ -175,28 +176,28 @@
             <div class="field">
               <div class="ui checkbox">
                 <input type="checkbox" ng-model="user.confirmation.genderNeutral">
-                <label> I would be okay with gender neutral housing. </label>
+                <label> No tengo problemas con personas de otro género. </label>
               </div>
             </div>
 
             <div class="field">
               <div class="ui checkbox">
                 <input type="checkbox" ng-model="user.confirmation.smokingFriendly">
-                <label> I would be okay in housing with smoking-friendly policies. </label>
+                <label> Me gustaría tener cerca un área de fumadores. </label>
               </div>
             </div>
 
             <div class="field">
               <div class="ui checkbox">
                 <input type="checkbox" ng-model="user.confirmation.catFriendly">
-                <label> I would be okay in housing that has cats. Meow! </label>
+                <label> Si, puede haber gatitos durante el evento ¡Miau! </label>
               </div>
             </div>
 
 
             <div class="field">
               <label>
-                Let us know if there's anything else we should know about matching you with a host.
+                Déjanos saber si hay algo más que te gustaría para pasar la noche en la sede:
               </label>
               <textarea
                 name="hostNotes"
@@ -209,27 +210,27 @@
           <br>
           <br>
 
-          <div class="divided title">Travel</div>
+          <div class="divided title">Viaje</div>
 
           <div class="field">
             <p>
-              As a reminder, our reimbursement policy is as follows:
+              Como recordatorio, nuestra política de generación de justificantes es la siguiente:
             </p>
             <ul>
-              <li> Up to $100 from within Massachusetts </li>
-              <li> Up to $200 from anywhere else in North America </li>
-              <li> Up to $500 from outside North America </li>
+              <li> A estudiantes que así lo requieran </li>
+              <li> A trabajadores que así lo requieran </li>
+              <li> Miembros del Colegio de Ingenieros Civiles que así lo requieran </li>
             </ul>
             <p>
-              We’ll also be sending buses free of charge to Princeton, NJ; New York, NY; New Haven, CT; and Providence, RI. Again, we only reimburse the minimum-cost travel path. Head back to the dashboard to read our full travel policy.
+              A su vez, te recordamos que dichos justificantes deberás solicitarlos personalmente a la finalización del evento.
             </p>
           </div>
 
           <div class="field">
-            <label> Will you be needing travel reimbursement? </label>
+            <label> ¿Requieres justificante? </label>
             <div class="ui checkbox">
               <input type="checkbox" ng-model="user.confirmation.needsReimbursement">
-              <label> I will be needing travel reimbursement. </label>
+              <label> Requiero un justificante. </label>
             </div>
           </div>
 
@@ -340,58 +341,58 @@
           </div>
 
           <div class="field">
-            <label> Photo Release </label>
+            <label> Acuerdo de uso de imágen </label>
             <p>
               <a
                 target="_blank"
                 href="https://go.hackmit.org/photo-release">
-                Photo Release
+                Acuerdo de uso de imágen
               </a>
             </p>
             <p>
-              Signing this photo release means if we take photos or photos of you, we can share it with the world.
+              Al firmar este acerdo de uso de imágen nos autorizas a difundir fotografías de tu persona con el mundo entero.
             </p>
             <p>
-              By writing my name below, I affirm that I have read and accepted the terms of the photo release above.
+              Al escribir mi nombre debajo, autorizo el uso de mi imágen dentro y fuera del evento:
             </p>
             <input type="text"
                    name="signaturePhotoRelease"
-                   placeholder="Your Full Legal Name"
+                   placeholder="Tu nombre completo"
                    ng-model="user.confirmation.signaturePhotoRelease">
           </div>
 
           <div class="field">
-            <label> Code of Conduct </label>
+            <label> Código de Conducta </label>
             <p>
               <a
                 target="_blank"
                 href="https://go.hackmit.org/code-of-conduct">
-                Hacker Code of Conduct
+                Código de Conducta Hacker
               </a>
             </p>
             <p>
-              It is extremely important to us that attendees follow a set of guidelines to make the event fun for everyone involved. Please read through and make sure you understand what we will be expecting of you.
+              Es muy importante para nosotros que los asistentes sigan una serie de lineamientos para hacer el evento divertido para todos los involucrados. Por favor, lee el documento y asegúrate de entender lo que esperamos de ti.
             </p>
             <p>
-              By writing my name below, I affirm that I have read and will abide by the code of conduct detailed above.
+              Al escribir mi nombre debajo, confirmo que acataré los lineamientos descritos en el Código de Conduct Hacker:
             </p>
             <input type="text"
                    name="signatureCodeOfConduct"
-                   placeholder="Your Full Legal Name"
+                   placeholder="Tu nombre completo"
                    ng-model="user.confirmation.signatureCodeOfConduct">
           </div>
 
           <br>
           <br>
 
-          <div class="divided title">everything else</div>
+          <div class="divided title">todo lo demás</div>
 
           <div class="field">
             <label>
-              Additional Notes
+              Notas adicionales
             </label>
             <p>
-              If there's anything else you need to let us know, tell us here!
+              Si hay algo más que debamos saber ¡Déjanos un mensaje aquí abajo! :)
             </p>
             <textarea
               ng-model="user.confirmation.notes"></textarea>
@@ -401,7 +402,7 @@
             <button type="submit"
                     class="fluid ui purple button"
                     ng-click="submitForm()">
-              Submit
+              Subir
             </button>
           </div>
 

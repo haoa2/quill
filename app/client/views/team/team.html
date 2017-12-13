@@ -1,6 +1,6 @@
 <div id="team" class="page">
   <div class="divided title">
-    Team
+    Equipo
   </div>
   <div class="ui stackable centered page grid">
     <div class="column">
@@ -22,7 +22,7 @@
           ng-show="!user.teamCode && regIsOpen">
 
           <div class="title">
-            Join or Create a Team
+            Unirse o crear un equipo.
           </div>
 
           <br>
@@ -39,7 +39,7 @@
             <button
               class="ui fluid pink button"
               ng-click="joinTeam()">
-              Join or Create Team
+              Unirse o Crear un Equipo
             </button>
           </div>
 
@@ -49,7 +49,7 @@
           ng-show="user.teamCode">
           <div class="form">
             <div class="title">
-              Your Team Name:
+              El nombre de tu equipo:
             </div>
           </div>
           <br>
@@ -63,14 +63,14 @@
 
           <div class="form">
             <div class="title">
-              Your Team:
+              Tu equipo:
             </div>
           </div>
 
           <p
             ng-repeat="user in teammates"
             class="item">
-            {{user.profile.name || 'Somebody (has not filled out their profile!)'}}
+            {{user.profile.name || 'Alguien no ha llenado su perfil'}}
           </p>
 
           <div
@@ -79,7 +79,7 @@
 
             <button
               class="ui fluid red button"
-              ng-click="leaveTeam()">Leave Team</button>
+              ng-click="leaveTeam()">Dejar Equipo</button>
           </div>
 
         </div>

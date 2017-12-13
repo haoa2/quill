@@ -14,14 +14,14 @@
 
   <div>
     <p>
-      <strong> Status: </strong>
+      <strong> Estado: </strong>
       <span
         class="ui label">
         {{selectedUser.status.name.toUpperCase()}}
       </span>
     </p>
     <p>
-      <strong> Admitted by: </strong> {{selectedUser.status.admittedBy ? selectedUser.status.admittedBy : 'N/A'}}
+      <strong> Admitido por: </strong> {{selectedUser.status.admittedBy ? selectedUser.status.admittedBy : 'N/A'}}
     </p>
   </div>
 
@@ -32,19 +32,19 @@
     <fieldset ng-disabled="false">
 
       <div class="ui header">
-        Basic Info
+        Información Básica:
       </div>
 
       <div class="field">
         <strong>
-          Created on:
+          Creado el:
         </strong>
         {{formatTime(selectedUser.timestamp)}}
       </div>
 
       <div class="field">
         <strong>
-          Last Updated:
+          Última vez actualizado:
         </strong>
         {{formatTime(selectedUser.lastUpdated)}}
       </div>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="field">
-        <label> Team </label>
+        <label> Equipo </label>
         <input type="text" ng-model="selectedUser.teamCode" />
       </div>
 
@@ -71,7 +71,7 @@
     <fieldset ng-disabled="false">
 
       <div class="ui header">
-       Profile
+       Perfil
       </div>
 
       <div class="field">
@@ -83,14 +83,14 @@
       </div>
 
       <div class="field">
-        <label> Full Name </label>
+        <label> Nombre Completo </label>
         <input type="text"
                name="name"
                ng-model="selectedUser.profile.name">
       </div>
 
       <div class="field" ng-show="autoFilledSchool">
-        <label> School </label>
+        <label> Escuela </label>
         <input class="ui input"
                disabled="disabled"
                ng-show="autoFilledSchool"
@@ -98,7 +98,7 @@
       </div>
 
       <div class="field" ng-show="!autoFilledSchool">
-        <label> School </label>
+        <label> Escuela </label>
         <input class="ui input"
                name="school"
                ng-model="selectedUser.profile.school">
@@ -109,7 +109,10 @@
         <select
           name="year"
           ng-model="selectedUser.profile.graduationYear">
-          <option value="">Graduation Year</option>
+          <option value="">Año de Graduación</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
           <option value="2016">2016</option>
           <option value="2017">2017</option>
           <option value="2018">2018</option>
@@ -118,15 +121,15 @@
       </div>
 
       <div class="field">
-        <label>Gender</label>
+        <label>Género</label>
         <select
           name="gender"
           ng-model="selectedUser.profile.gender">
-          <option value="">Gender</option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="O">Other</option>
-          <option value="N">I prefer not to answer.</option>
+          <option value="">Género</option>
+          <option value="M">Hombre</option>
+          <option value="F">Mujer</option>
+          <option value="O">Otro</option>
+          <option value="N">Prefiero no contestar.</option>
         </select>
       </div>
 
