@@ -5,10 +5,22 @@ var jwt             = require('jsonwebtoken');
 mongoose.connect(database);
 
 var UserController = require('../app/server/controllers/UserController');
+var User = require('../app/server/models/User');
 
-var user = { email: process.env.ADMIN_EMAIL };
+var userAdmin = { email: process.env.ADMIN_EMAIL };
+var count = 0;
+User.find({}, function (err, users) {
+	users.forEach(function(user){
+		UserController.admitUser(user._id,userAdmin,function(){
+			console.log('Uno más admitido!');
+		});
+	});
+});
 
+/*
 var userArray = require('fs').readFileSync('accepted.txt').toString().split('\n');
+console.log(userArray);
+
 var count = 0;
 userArray.forEach(function (id) {
   UserController.admitUser( id, user, function() {
@@ -18,3 +30,4 @@ userArray.forEach(function (id) {
     }
   });
 });
+*/
