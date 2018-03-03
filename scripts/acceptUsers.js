@@ -14,9 +14,10 @@ User.find({}, function (err, users) {
 		UserController.admitUser(user._id,userAdmin,function(){
 			console.log('Uno más admitido!');
 		});
+		console.log('ID: '+user._id);
 	});
 });
-
+console.log('Finalizado');
 /*
 var userArray = require('fs').readFileSync('accepted.txt').toString().split('\n');
 console.log(userArray);
