@@ -133,7 +133,7 @@
             </p>
             <a
               target="_blank"
-              href="https://go.hackmit.org/skill-sheets"
+              href="https://form.jotform.co/80611424098858"
               class="ui pink button">
               Subir
             </a>
@@ -238,11 +238,11 @@
             ng-show="user.confirmation.needsReimbursement">
 
             <div class="ui header">
-              Mailing Address
+              Información de Origen
             </div>
 
             <p>
-              Travel reimbursement is processed and sent by check after the event. To expedite the reimbursement process and ensure that you receive your reimbursement as quickly as possible, make sure that your mailing address is accurate and you upload your receipts.
+              Los justificantes se generarán únicamente a foráneos de la Ciudad de México que así lo requieran por lo que necesitamos que llenen el siguiente formulario con su información de origen.
             </p>
 
             <div class="field">
@@ -253,7 +253,7 @@
             </div>
 
             <div class="field">
-              <label> Address Line 1 - Street address, P.O. box, company name, c/o </label>
+              <label> Dirección 1 - Calle, Número, Oficina Postal</label>
               <input
                 type="text"
                 name="addressLine1"
@@ -261,7 +261,7 @@
             </div>
 
             <div class="field">
-              <label> Address Line 2 - Apartment, suite, unit, building, floor, etc. </label>
+              <label> Dirección 2 - Apartamento, suite, unidad, edificio, piso, etc. </label>
               <input
                 type="text"
                 name="addressLine2"
@@ -270,46 +270,33 @@
 
             <div class="four fields">
               <div class="field">
-                <label> City </label>
+                <label> Ciudad </label>
                 <input
                   type="text"
                   name="city"
                   ng-model="user.confirmation.address.city">
               </div>
               <div class="field">
-                <label> State/Province/Region </label>
+                <label> Estado/Provincia/Región </label>
                 <input
                   type="text"
                   name="state"
                   ng-model="user.confirmation.address.state">
               </div>
               <div class="field">
-                <label> ZIP </label>
+                <label> Código Postal </label>
                 <input
                   type="text"
                   name="zip"
                   ng-model="user.confirmation.address.zip">
               </div>
               <div class="field">
-                <label> Country </label>
+                <label> País </label>
                 <input
                   type="text"
                   name="country"
                   ng-model="user.confirmation.address.country">
               </div>
-            </div>
-
-            <div class="field">
-              <label> Travel Receipt </label>
-              <p>
-                So that we can process your reimbursement faster, please name your receipt: <strong>{{fileName}}</strong>
-              </p>
-              <a
-                target="_blank"
-                href="https://go.hackmit.org/travel-receipts"
-                class="ui pink button">
-                Upload Receipt
-              </a>
             </div>
 
           </div>
@@ -320,19 +307,19 @@
           <div class="divided title">Legal</div>
 
           <div class="field">
-            <label> Liability Waiver </label>
+            <label> Excención de Responsabilidad </label>
             <p>
               <a
                 target="_blank"
-                href="https://go.hackmit.org/liability-waiver">
-                Liability Waiver
+                href="https://hackathonciudad40.com/assets/BasesHackathonCiudad40.pdf">
+                Excención de Responsabilidad
               </a>
             </p>
             <p>
-              For legal reasons, our university asks that you read and accept the terms of our liability waiver. Again, as we mentioned in the original lottery application - you <strong> must </strong> be 18 years or older or an MIT undergraduate by the day of the event, or <strong> we will refuse you admission at the door. We will be checking ID. </strong>
+              Por motivos legales, el evento pide que leas y aceptes nuestra excención de responsabilidad. De nuevo, como mencionamos en la aplicación original - tu <strong> debes </strong> tener 18 años o más para participar el día del evento, o <strong> te negaremos el acceso el día del evento. Revisaremos identificación oficial. </strong>
             </p>
             <p>
-              By writing my name below, I affirm that I have read and accepted the terms of the liability waiver above, and will be either an MIT undergraduate or 18 years or older at the time of the event.
+              Al escribir mi nombre debajo, afirmo que he leído y aceptado los términos de excención de responsabilidad de más arriba, y que tendré 18 años o más al momento del evento.
             </p>
             <input type="text"
                    name="signatureLiabilityWaiver"
@@ -345,7 +332,7 @@
             <p>
               <a
                 target="_blank"
-                href="https://go.hackmit.org/photo-release">
+                href="https://hackathonciudad40.com/assets/BasesHackathonCiudad40.pdf">
                 Acuerdo de uso de imágen
               </a>
             </p>
@@ -366,7 +353,7 @@
             <p>
               <a
                 target="_blank"
-                href="https://go.hackmit.org/code-of-conduct">
+                href="https://hackathonciudad40.com/assets/BasesHackathonCiudad40.pdf">
                 Código de Conducta Hacker
               </a>
             </p>
